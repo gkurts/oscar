@@ -33,14 +33,13 @@ if os.getuid() != 0:
 print "You need accounts with a few APIs to use Oscar. First of all,"
 print "go to"
 print
-print "    http://www.digit-eyes.com"
+print "    http://www.upcdatabase.org"
 print
 print "and sign up for an account there. This is the database that Oscar uses to"
 print "match barcodes with names of products. When you're ready, enter your"
 print "API credentials. They can be found on the \"My Account\" page."
 print
-digiteyes_app_key = raw_input('App Key ("K" Code): ')
-digiteyes_auth_key = raw_input('Authorization Key ("M" Code): ')
+upcdatabase_api_key = raw_input('API Key: ')
 
 
 ######################################## Trello
@@ -271,8 +270,7 @@ trello_grocery_board: '{trello_grocery_board}'
 trello_grocery_list: '{trello_grocery_list}'
 trello_db_board: '{trello_db_board}'
 
-digiteyes_app_key: '{digiteyes_app_key}'
-digiteyes_auth_key: '{digiteyes_auth_key}'
+upcdatabase_api_key: '{upcdatabase_api_key}'
 '''.format(**locals()))
 oscar_yaml.close()
 
